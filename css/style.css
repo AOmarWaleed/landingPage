@@ -1,0 +1,835 @@
+
+/* VARIABLES */
+:root {
+    --main-color: #e65f78;
+}
+
+
+
+/* GLOBAL */
+
+body {
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    color: #333;
+    font-family: mulish;
+    line-height: 2;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: poppins;
+}
+
+/* --------------- */
+.section-header > p {
+    color: var(--main-color);
+    font-family: poppins;
+}
+/* -------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+/* -----------CLIP PATH BUTTON-------------- */
+.liner_button {
+    background-color: var(--main-color);
+    border-radius: 0px !important;
+    font-weight: 400;
+    font-family: poppins;
+    position: relative; 
+}
+
+.liner_button:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  
+    -webkit-clip-path: circle(0px at left bottom );
+  
+            clip-path: circle(0px at left bottom );
+    background-color: rgba(255, 255, 255, .2);
+   
+
+    -webkit-transition: 0.4s -webkit-clip-path;
+   
+
+    transition: 0.4s -webkit-clip-path;
+   
+
+    -o-transition: 0.4s clip-path;
+   
+
+    transition: 0.4s clip-path;
+   
+
+    transition: 0.4s clip-path, 0.4s -webkit-clip-path;
+
+}
+
+.liner_button:hover:after {
+    -webkit-transition: 1s -webkit-clip-path;
+    transition: 1s -webkit-clip-path;
+    -o-transition: 1s clip-path;
+    transition: 1s clip-path;
+    transition: 1s clip-path, 1s -webkit-clip-path;
+    -webkit-clip-path: circle(500px at left top );
+            clip-path: circle(500px at left top );
+    
+}
+
+/* START HOME SECTION */
+
+/* START NAV */
+#navBar {
+    background: #787374c7;
+    transition: .3s all;
+}
+
+.navbar-brand img{
+    max-width: 50px
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-family: poppins;
+    font-weight: 500; 
+    
+    -webkit-transition: .6s color; 
+    
+    -o-transition: .6s color; 
+    
+    transition: .6s color;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+
+/* MEDIA QUERY  */
+.navbar-toggler:focus,
+.navbar-toggler:hover,
+.navbar-toggler:active {
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.media_ul {
+    width: 35px;
+    height: 20px;
+    z-index: 11;
+    right: 0;
+    top: 0;
+}
+
+.media_ul .span_container span {
+    height: 2px;
+    -webkit-transition: .4s opacity ,.6s top ,.8s transform;
+    -o-transition: .4s opacity ,.6s top ,.8s transform;
+    transition: .4s opacity ,.6s top ,.8s transform;
+}
+
+.media_ul .span_container span:first-child {
+    top: 0;   
+}
+
+.media_ul .span_container span:nth-child(2) {
+    top: 9px;
+}
+
+.media_ul .span_container span:last-child {
+    top: 18px;
+}
+
+.media_ul:hover .span_container span:nth-child(2),
+.media_ul:active .span_container span:nth-child(2) {
+    opacity: 0;
+}
+
+.media_ul:hover .span_container span:first-child,
+.media_ul:hover .span_container span:last-child,
+.media_ul:active .span_container span:first-child,
+.media_ul:active .span_container span:last-child  {
+    top: 9px;
+}
+
+.media_ul:hover .span_container span:first-child,
+.media_ul:active .span_container span:first-child {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.media_ul:hover .span_container span:last-child,
+.media_ul:active .span_container span:last-child {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.nav-link.active {
+    color: var(--main-color) !important;
+}
+
+
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        border: none !important;
+    }
+}
+
+/* END NAV */
+
+
+#home {
+    background-image: url(../images/home-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+#home .content .home_img img {
+    width: 190px;
+}
+
+#home .content .home_img img {
+    border-color: rgba(255, 255, 255, .2) !important;
+}
+
+#home .content .home_text span {
+    color: var(--main-color);
+}
+
+#home .content .home_text p {
+    height: 1px;
+}
+
+ #home .content .home_text p::after {
+    content: 'I am a ';
+    -webkit-animation: intro_heading 7s  infinite ;
+            animation: intro_heading 7s  infinite ;
+}
+
+@-webkit-keyframes intro_heading {
+    2% {content: "I am a D| " }
+    4% {content: "I am a De| " }
+    6% {content: "I am a Dev|" }
+    8% {content: "I am a Deve| " }
+    10% {content: "I am a Devel| " }
+    12% {content: "I am a Develo| " }
+    14% {content: "I am a Develope| " }
+    16% {content: "I am a Developer| " }
+    18% {content: "I am a Develope| " }
+    20% {content: "I am a Develop| " }
+    22% {content: "I am a Develo| " }
+    24% {content: "I am a Devel| " }
+    26% {content: "I am a Deve| " }
+    28% {content: "I am a Dev| " }
+    30% {content: "I am a De| " }
+    32% {content: "I am a D| " }
+    34% {content: "I am a | " }
+    36% {content: "I am a F| " }
+    38% {content: "I am a Fr| " }
+    40% {content: "I am a Fre| " }
+    42% {content: "I am a Free| " }
+    44% {content: "I am a Freel| " }
+    46% {content: "I am a Freela| " }
+    48% {content: "I am a Freelan| " }
+    50% {content: "I am a Freelanc| " }
+    52% {content: "I am a Freelance| " }
+    54% {content: "I am a Freelancer| " }
+    56% {content: "I am a Freelance| " }
+    58% {content: "I am a Freelanc|" }
+    60% {content: "I am a Freelan|" }
+    62% {content: "I am a Freela| " }
+    64% {content: "I am a Freel|| " }
+    66% {content: "I am a Free| " }
+    68% {content: "I am a Fre| " }
+    70% {content: "I am a Fr| " }
+    72% {content: "I am a F|" }
+    74% {content: "I am a | " }
+    76% {content: "I am a p| " }
+    78% {content: "I am a Ph| " }
+    80% {content: "I am a Pho| " }
+    81% {content: "I am a Phot| " }
+    82% {content: "I am a Photo| " }
+    83% {content: "I am a Photog| " }
+    84% {content: "I am a Photogr| " }
+    85% {content: "I am a Photogra| " }
+    86% {content: "I am a Photograp| " }
+    87% {content: "I am a Photograph| " }
+    88% {content: "I am a Photographe| " }
+    89% {content: "I am a Photographer| " }
+    90% {content: "I am a Photographe|" }
+    91% {content: "I am a Photograph|" }
+    92% {content: "I am a Photograp|" }
+    93% {content: "I am a Photogra| " }
+    94% {content: "I am a Photogr| " }
+    95% {content: "I am a Photog| " }
+    96% {content: "I am a Photo| " }
+    97% {content: "I am a Phot| " }
+    98% {content: "I am a Pho| " }
+    99% {content: "I am a Ph| " }
+    100% {content: "I am a P| " }
+    
+}
+
+@keyframes intro_heading {
+    2% {content: "I am a D| " }
+    4% {content: "I am a De| " }
+    6% {content: "I am a Dev|" }
+    8% {content: "I am a Deve| " }
+    10% {content: "I am a Devel| " }
+    12% {content: "I am a Develo| " }
+    14% {content: "I am a Develope| " }
+    16% {content: "I am a Developer| " }
+    18% {content: "I am a Develope| " }
+    20% {content: "I am a Develop| " }
+    22% {content: "I am a Develo| " }
+    24% {content: "I am a Devel| " }
+    26% {content: "I am a Deve| " }
+    28% {content: "I am a Dev| " }
+    30% {content: "I am a De| " }
+    32% {content: "I am a D| " }
+    34% {content: "I am a | " }
+    36% {content: "I am a F| " }
+    38% {content: "I am a Fr| " }
+    40% {content: "I am a Fre| " }
+    42% {content: "I am a Free| " }
+    44% {content: "I am a Freel| " }
+    46% {content: "I am a Freela| " }
+    48% {content: "I am a Freelan| " }
+    50% {content: "I am a Freelanc| " }
+    52% {content: "I am a Freelance| " }
+    54% {content: "I am a Freelancer| " }
+    56% {content: "I am a Freelance| " }
+    58% {content: "I am a Freelanc|" }
+    60% {content: "I am a Freelan|" }
+    62% {content: "I am a Freela| " }
+    64% {content: "I am a Freel|| " }
+    66% {content: "I am a Free| " }
+    68% {content: "I am a Fre| " }
+    70% {content: "I am a Fr| " }
+    72% {content: "I am a F|" }
+    74% {content: "I am a | " }
+    76% {content: "I am a p| " }
+    78% {content: "I am a Ph| " }
+    80% {content: "I am a Pho| " }
+    81% {content: "I am a Phot| " }
+    82% {content: "I am a Photo| " }
+    83% {content: "I am a Photog| " }
+    84% {content: "I am a Photogr| " }
+    85% {content: "I am a Photogra| " }
+    86% {content: "I am a Photograp| " }
+    87% {content: "I am a Photograph| " }
+    88% {content: "I am a Photographe| " }
+    89% {content: "I am a Photographer| " }
+    90% {content: "I am a Photographe|" }
+    91% {content: "I am a Photograph|" }
+    92% {content: "I am a Photograp|" }
+    93% {content: "I am a Photogra| " }
+    94% {content: "I am a Photogr| " }
+    95% {content: "I am a Photog| " }
+    96% {content: "I am a Photo| " }
+    97% {content: "I am a Phot| " }
+    98% {content: "I am a Pho| " }
+    99% {content: "I am a Ph| " }
+    100% {content: "I am a P| " }
+    
+} 
+
+
+/* ---------------------- */
+.box {
+    top: 20%;
+    z-index: 9999;
+    right: 0;
+    transition: .6s all;
+}
+
+.box > div:first-child {
+   cursor: pointer;
+}
+.box .container-fluid .row .col-4 {
+    text-align: center;
+}
+.box .container-fluid .row .col-4 span {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: var(--color-option);
+}
+
+/* angle I C O N  */
+.angle {
+    bottom: 5%;
+
+    -webkit-animation: angle-move 2s  infinite ;
+
+            animation: angle-move 2s  infinite ;
+}
+
+@-webkit-keyframes angle-move {
+    0%{bottom: 5%;}
+    25%{bottom: 12%;}
+    50%{bottom: 5%;}
+    75%{bottom: 7%;}
+    100%{bottom: 5%;}
+}
+
+@keyframes angle-move {
+    0%{bottom: 5%;}
+    25%{bottom: 12%;}
+    50%{bottom: 5%;}
+    75%{bottom: 7%;}
+    100%{bottom: 5%;}
+}
+
+@media screen and (max-height: 600px) {
+    .angle {
+        display: none;
+    }
+    
+}
+/* END HOME SECTION */
+
+
+
+
+
+/* START ABOUT SECTION */
+
+#about .container-lg  .row .about_img .inner{
+    border: 10px solid black;
+    -webkit-transform: translate(20px,40px  );
+        -ms-transform: translate(20px,40px  );
+            transform: translate(20px,40px  );
+    inset: 0;
+    z-index: -1;
+
+    -webkit-transition: .6s transform;
+
+    -o-transition: .6s transform;
+
+    transition: .6s transform;
+
+}
+
+#about .container-lg  .row .about_img img {
+    -webkit-transition: .6s .2s transform;
+    -o-transition: .6s .2s transform;
+    transition: .6s .2s transform;
+} 
+
+#about .container-lg  .row .about_img:hover .inner {
+    -webkit-transform: translate(10px,30px);
+        -ms-transform: translate(10px,30px);
+            transform: translate(10px,30px);
+}
+
+#about .container-lg  .row .about_img:hover img {
+    -webkit-transform: translate(-10px,-10px);
+        -ms-transform: translate(-10px,-10px);
+            transform: translate(-10px,-10px);
+}
+
+span.designer_name {
+    color: var(--main-color);
+    font-style: italic;
+}
+
+/* ------------------------- */
+
+.about_list_info > div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+
+}
+
+.about_list_info i {
+    color: var(--main-color);
+}
+
+.about_list_info span:first-of-type {
+    min-width: 70px;
+} 
+
+.about_list_info span:last-of-type .brdr {
+    height: 1px;
+    width: 0;
+    left: 100%;
+
+
+    -webkit-transition: .8s width, .6s left;
+
+
+    -o-transition: .8s width, .6s left;
+
+
+    transition: .8s width, .6s left;
+}
+
+.about_list_info span:last-of-type:hover .brdr {
+   /* animation-name: brdr-fancy;
+   animation-duration: 3s; */
+
+   -webkit-transition: .8s width, 0s left;
+
+   -o-transition: .8s width, 0s left;
+
+   transition: .8s width, 0s left;
+   left: 0;
+   width: 100%;
+
+
+}
+
+#aboutTyping {
+    color: var(--main-color);
+}
+
+.col-lg-8 h3::after {
+    content: '';
+    color: var(--main-color);
+    -webkit-animation-name: title_heading;
+            animation-name: title_heading;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes title_heading {
+    2% {content: " D " }
+    4% {content: " De " }
+    6% {content: " Dev" }
+    8% {content: " Deve " }
+    10% {content: " Devel " }
+    12% {content: " Develo " }
+    14% {content: " Develope " }
+    16% {content: " Developer " }
+    18% {content: " Develope " }
+    20% {content: " Develop " }
+    22% {content: " Develo " }
+    24% {content: " Devel " }
+    26% {content: " Deve " }
+    28% {content: " Dev " }
+    30% {content: " De " }
+    32% {content: " D " }
+    34% {content: "  " }
+    36% {content: " F " }
+    38% {content: " Fr " }
+    40% {content: " Fre " }
+    42% {content: " Free " }
+    44% {content: " Freel " }
+    46% {content: " Freela " }
+    48% {content: " Freelan " }
+    50% {content: " Freelanc " }
+    52% {content: " Freelance " }
+    54% {content: " Freelancer " }
+    56% {content: " Freelance " }
+    58% {content: " Freelanc" }
+    60% {content: " Freelan" }
+    62% {content: " Freela " }
+    64% {content: " Freel " }
+    66% {content: " Free " }
+    68% {content: " Fre " }
+    70% {content: " Fr " }
+    72% {content: " F" }
+    74% {content: "  " }
+    76% {content: " p " }
+    78% {content: " Ph " }
+    80% {content: " Pho " }
+    81% {content: " Phot " }
+    82% {content: " Photo " }
+    83% {content: " Photog " }
+    84% {content: " Photogr " }
+    85% {content: " Photogra " }
+    86% {content: " Photograp " }
+    87% {content: " Photograph " }
+    88% {content: " Photographe " }
+    89% {content: " Photographer " }
+    90% {content: " Photographe" }
+    91% {content: " Photograph" }
+    92% {content: " Photograp" }
+    93% {content: " Photogra " }
+    94% {content: " Photogr " }
+    95% {content: " Photog " }
+    96% {content: " Photo " }
+    97% {content: " Phot " }
+    98% {content: " Pho " }
+    99% {content: " Ph " }
+    100% {content: " P " }
+    
+}
+
+@keyframes title_heading {
+    2% {content: " D " }
+    4% {content: " De " }
+    6% {content: " Dev" }
+    8% {content: " Deve " }
+    10% {content: " Devel " }
+    12% {content: " Develo " }
+    14% {content: " Develope " }
+    16% {content: " Developer " }
+    18% {content: " Develope " }
+    20% {content: " Develop " }
+    22% {content: " Develo " }
+    24% {content: " Devel " }
+    26% {content: " Deve " }
+    28% {content: " Dev " }
+    30% {content: " De " }
+    32% {content: " D " }
+    34% {content: "  " }
+    36% {content: " F " }
+    38% {content: " Fr " }
+    40% {content: " Fre " }
+    42% {content: " Free " }
+    44% {content: " Freel " }
+    46% {content: " Freela " }
+    48% {content: " Freelan " }
+    50% {content: " Freelanc " }
+    52% {content: " Freelance " }
+    54% {content: " Freelancer " }
+    56% {content: " Freelance " }
+    58% {content: " Freelanc" }
+    60% {content: " Freelan" }
+    62% {content: " Freela " }
+    64% {content: " Freel " }
+    66% {content: " Free " }
+    68% {content: " Fre " }
+    70% {content: " Fr " }
+    72% {content: " F" }
+    74% {content: "  " }
+    76% {content: " p " }
+    78% {content: " Ph " }
+    80% {content: " Pho " }
+    81% {content: " Phot " }
+    82% {content: " Photo " }
+    83% {content: " Photog " }
+    84% {content: " Photogr " }
+    85% {content: " Photogra " }
+    86% {content: " Photograp " }
+    87% {content: " Photograph " }
+    88% {content: " Photographe " }
+    89% {content: " Photographer " }
+    90% {content: " Photographe" }
+    91% {content: " Photograph" }
+    92% {content: " Photograp" }
+    93% {content: " Photogra " }
+    94% {content: " Photogr " }
+    95% {content: " Photog " }
+    96% {content: " Photo " }
+    97% {content: " Phot " }
+    98% {content: " Pho " }
+    99% {content: " Ph " }
+    100% {content: " P " }
+    
+} 
+
+/* END ABOUT SECTION */
+
+
+
+
+
+
+/* START SERVICES SECTION */
+#services {
+    background-color: #f9f9f9;
+}
+
+.services_item {
+    -webkit-transition: .6s all;
+    -o-transition: .6s all;
+    transition: .6s all;
+}
+
+.services_item i {
+    color: var(--main-color);
+}
+
+a.to_start span {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0,0,0,.2);
+}
+
+a.to_start span:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 2px;
+    width: 0%;
+    background-color: rgba(0,0,0,.8);
+
+    -webkit-transition: .6s width, .6s left;
+
+    -o-transition: .6s width, .6s left;
+
+    transition: .6s width, .6s left;
+
+}
+
+a.to_start:hover span:after {
+    -webkit-transition: .6s width, 0s left;
+    -o-transition: .6s width, 0s left;
+    transition: .6s width, 0s left;
+    left: 0;
+    width: 100%;
+}
+
+.services_item:hover {
+    -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 20%) !important;
+            box-shadow: 0 0 20px rgb(0 0 0 / 20%) !important;
+}
+/* END SERVICES SECTION */
+
+
+
+
+
+/* START PORTOFOLIO SECTION */
+.nav-tabs,
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.active {
+    border: none;
+} 
+
+.nav-tabs .nav-link.active, 
+.nav-tabs .nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+.portofolio_img  {
+    -webkit-transition: .6s transform;
+    -o-transition: .6s transform;
+    transition: .6s transform;
+    
+    height: 450px;
+}
+
+.portofolio_img .inner {
+    height: 100%;
+    background-image: url(../images/port1.jpg);
+
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: cover ;
+
+    -webkit-transition: .6s all;
+
+    -o-transition: .6s all;
+
+    transition: .6s all;
+}
+
+.portofolio_img .inner_2 {
+    background-image: url(../images/port2.jpg);
+}
+.portofolio_img .inner_3 {
+    background-image: url(../images/port3.jpg);
+}
+.portofolio_img .inner_4 {
+    background-image: url(../images/port4.jpg);
+}
+.portofolio_img .inner_5 {
+    background-image: url(../images/port5.jpg);
+}
+.portofolio_img .inner_6 {
+    background-image: url(../images/port6.jpg);
+}
+
+.portofolio_img .inner:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+/* END PORTOFOLIO SECTION */
+
+
+
+/* START COUNTER SECTION */
+.counter {
+    background-image: url(https://marketifythemes.net/html/arlo/img/patterns/ravenna.png);
+
+}
+/* END COUNTER SECTION */
+
+
+
+
+/* START NEWS SECTION */
+#news {
+    background-color: #f9f9f9;
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.card-text a {
+    -webkit-transition: .6s color;
+    -o-transition: .6s color;
+    transition: .6s color;
+}
+.card-text a:hover {
+    color: var(--main-color) !important;
+}
+.news_item img {
+    -webkit-transition: .6s transform;
+    -o-transition: .6s transform;
+    transition: .6s transform;
+}
+.news_item .inner_img:hover img {
+    -webkit-transform: rotate(5deg) scale(1.2);
+        -ms-transform: rotate(5deg) scale(1.2);
+            transform: rotate(5deg) scale(1.2);
+}
+/* END NEWS SECTION */
+
+/* START CONTACT SECTION */
+form button {
+    background-color: var(--main-color);
+}
+
+form textarea {
+    min-height: 150px !important;
+    max-height: 150px !important;
+}
+
+.mapouter,
+.gmap_canvas {
+    max-width: 100%;
+}
+
+
+@media screen and (min-width: 992px) {
+    #contact > .container-lg > p {
+        width: 50%;
+    }
+}
+
+/* END CONTACT SECTION */
+
+/* START FOOTER */
+ul.icons i:hover {
+    color: var(--main-color) !important;
+    transition: .3s all;
+}
+/* END FOOTER */
